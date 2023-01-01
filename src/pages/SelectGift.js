@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { giftItems } from "./GiftItems";
 
-const SelectGift = ({ setPage }) => {
-  const [selectedItems, setSelectedItems] = useState([]);
-  const [totalCost, setTotalCost] = useState(0);
+const SelectGift = ({ setPage, setSelectedItems, setTotalCost }) => {
+  //   const [selectedItems, setSelectedItems] = useState([]);
+  //   const [totalCost, setTotalCost] = useState(0);
 
   function handleSelectItem(item) {
     setSelectedItems((prevItems) => [...prevItems, item]);

@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { giftBoxes } from "./GiftItems";
 
-const GiftWrapper = ({ setPage }) => {
-  const [selectedBox, setSelectedBox] = useState(null);
-  const [totalCost, setTotalCost] = useState(0);
+const GiftWrapper = ({
+  setPage,
+  setTotalCost,
+  setSelectedBox,
+  selectedBox,
+}) => {
+  //   const [selectedBox, setSelectedBox] = useState(null);
+  //   const [totalCost, setTotalCost] = useState(0);
   function handleBoxSelect(box) {
     setTotalCost(
       (prevCost) => prevCost - (selectedBox ? selectedBox.price : 0)
