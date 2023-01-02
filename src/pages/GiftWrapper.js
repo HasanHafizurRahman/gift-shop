@@ -17,34 +17,40 @@ const GiftWrapper = ({
     setTotalCost((prevCost) => prevCost + box.price);
   }
   return (
-    <div class="relative px-4 py-6 mx-auto max-w-screen-xl">
-      <h1 class="text-3xl font-bold text-center text-gray-900">Gift Boxes</h1>
+    <div className="relative px-4 py-6 mx-auto max-w-screen-xl">
+      <h1 className="text-3xl font-bold text-center text-gray-900">
+        Gift Boxes
+      </h1>
       {giftBoxes.map((box) => (
         <div
           key={box.id}
-          class="flex items-center justify-between py-2 border-b border-gray-200"
+          className="flex items-center justify-between py-2 border-b border-gray-200"
         >
-          <img src={box.image} alt="box" class="w-20 h-20 rounded-full" />
-          <span class="text-xl font-semibold text-gray-800">{box.name}</span>
-          <span class="text-xl font-semibold text-gray-800">${box.price}</span>
+          <img src={box.image} alt="box" className="w-20 h-20 rounded-full" />
+          <span className="text-xl font-semibold text-gray-800">
+            {box.name}
+          </span>
+          <span className="text-xl font-semibold text-gray-800">
+            ${box.price}
+          </span>
           <button
             onClick={() => handleBoxSelect(box)}
-            class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+            className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
           >
             Select One Gift
           </button>
         </div>
       ))}
-      <div class="flex justify-between mt-6">
+      <div className="flex justify-between mt-6">
         <button
           onClick={() => setPage((prev) => prev - 1)}
-          class="px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 focus:outline-none focus:shadow-outline-gray active:bg-gray-500"
+          className="px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 focus:outline-none focus:shadow-outline-gray active:bg-gray-500"
         >
           Prev
         </button>
         <button
           onClick={() => setPage((prev) => prev + 1)}
-          class="bg-gray-400 hover:bg-gray-600 text-gray-800 font-bold py-2 px-4 rounded-full"
+          className="bg-gray-400 hover:bg-gray-600 text-gray-800 font-bold py-2 px-4 rounded-full"
         >
           Next Page
         </button>
