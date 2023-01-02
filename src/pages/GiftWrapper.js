@@ -17,18 +17,53 @@ const GiftWrapper = ({
     setTotalCost((prevCost) => prevCost + box.price);
   }
   return (
-    <div>
-      <h1>Gift Boxes</h1>
+    <div class="relative px-4 py-6 mx-auto max-w-screen-xl">
+      <h1 class="text-3xl font-bold text-center text-gray-900">Gift Boxes</h1>
       {giftBoxes.map((box) => (
-        <div key={box.id}>
-          <span>{box.name}</span>
-          <span>{box.price}</span>
-          <button onClick={() => handleBoxSelect(box)}>Select One Gift</button>
+        <div
+          key={box.id}
+          class="flex items-center justify-between py-2 border-b border-gray-200"
+        >
+          <img src={box.image} alt="box" class="w-20 h-20 rounded-full" />
+          <span class="text-xl font-semibold text-gray-800">{box.name}</span>
+          <span class="text-xl font-semibold text-gray-800">{box.price}</span>
+          <button
+            onClick={() => handleBoxSelect(box)}
+            class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+          >
+            Select One Gift
+          </button>
         </div>
       ))}
-      <button onClick={() => setPage((prev) => prev - 1)}>Prev</button>
-      <button onClick={() => setPage((prev) => prev + 1)}>Next</button>
+      <div class="flex justify-between mt-6">
+        <button
+          onClick={() => setPage((prev) => prev - 1)}
+          class="px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 focus:outline-none focus:shadow-outline-gray active:bg-gray-500"
+        >
+          Prev
+        </button>
+        <button
+          onClick={() => setPage((prev) => prev + 1)}
+          class="px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 focus:outline-none focus:shadow-outline-gray active:bg-gray-500"
+        >
+          Next Page
+        </button>
+      </div>
     </div>
+
+    // <div>
+    //   <h1>Gift Boxes</h1>
+    //   {giftBoxes.map((box) => (
+    //     <div key={box.id}>
+    //       <img src={box.image} alt="box" />
+    //       <span>{box.name}</span>
+    //       <span>{box.price}</span>
+    //       <button onClick={() => handleBoxSelect(box)}>Select One Gift</button>
+    //     </div>
+    //   ))}
+    //   <button onClick={() => setPage((prev) => prev - 1)}>Prev</button>
+    //   <button onClick={() => setPage((prev) => prev + 1)}>Next</button>
+    // </div>
   );
 };
 

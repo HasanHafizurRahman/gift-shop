@@ -4,6 +4,8 @@ import GiftWrapper from "./pages/GiftWrapper";
 import IntroPage from "./pages/IntroPage";
 import OrderSummery from "./pages/OrderSummery";
 import SelectGift from "./pages/SelectGift";
+import Footer from "./shared/Footer";
+import Header from "./shared/Header";
 
 function App() {
   const [page, setPage] = useState(1);
@@ -13,6 +15,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       {page === 1 && <IntroPage setPage={setPage} />}
       {page === 2 && (
         <SelectGift
@@ -37,6 +40,7 @@ function App() {
           totalCost={totalCost}
         />
       )}
+      <Footer />
     </div>
   );
 }

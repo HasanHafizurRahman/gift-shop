@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "./Banner";
 
 const IntroPage = ({ setPage }) => {
   return (
@@ -7,6 +8,7 @@ const IntroPage = ({ setPage }) => {
         <h1 class="text-3xl font-bold text-gray-800 mb-6">
           Welcome to Our Gift Shop
         </h1>
+        <Banner />
         <p class="text-gray-700 text-lg mb-8">
           We offer wide selection of gifts for all occasions.
         </p>
@@ -18,7 +20,7 @@ const IntroPage = ({ setPage }) => {
             onClick={() => setPage((prev) => prev + 1)}
             class="bg-gray-400 hover:bg-gray-600 text-gray-800 font-bold py-2 px-4 rounded-full"
           >
-            Next
+            Next Page
           </button>
         </div>
       </div>
