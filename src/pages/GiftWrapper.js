@@ -26,7 +26,7 @@ const GiftWrapper = ({
         >
           <img src={box.image} alt="box" class="w-20 h-20 rounded-full" />
           <span class="text-xl font-semibold text-gray-800">{box.name}</span>
-          <span class="text-xl font-semibold text-gray-800">{box.price}</span>
+          <span class="text-xl font-semibold text-gray-800">${box.price}</span>
           <button
             onClick={() => handleBoxSelect(box)}
             class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
@@ -44,26 +44,12 @@ const GiftWrapper = ({
         </button>
         <button
           onClick={() => setPage((prev) => prev + 1)}
-          class="px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 focus:outline-none focus:shadow-outline-gray active:bg-gray-500"
+          class="bg-gray-400 hover:bg-gray-600 text-gray-800 font-bold py-2 px-4 rounded-full"
         >
           Next Page
         </button>
       </div>
     </div>
-
-    // <div>
-    //   <h1>Gift Boxes</h1>
-    //   {giftBoxes.map((box) => (
-    //     <div key={box.id}>
-    //       <img src={box.image} alt="box" />
-    //       <span>{box.name}</span>
-    //       <span>{box.price}</span>
-    //       <button onClick={() => handleBoxSelect(box)}>Select One Gift</button>
-    //     </div>
-    //   ))}
-    //   <button onClick={() => setPage((prev) => prev - 1)}>Prev</button>
-    //   <button onClick={() => setPage((prev) => prev + 1)}>Next</button>
-    // </div>
   );
 };
 

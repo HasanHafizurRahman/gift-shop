@@ -23,7 +23,7 @@ const SelectGift = ({ setPage, setSelectedItems, setTotalCost }) => {
             class="w-20 h-20 rounded-full"
           />
           <span class="text-xl font-semibold text-gray-800">{item.name}</span>
-          <span class="text-xl font-semibold text-gray-800">{item.price}</span>
+          <span class="text-xl font-semibold text-gray-800">${item.price}</span>
           <button
             onClick={() => handleSelectItem(item)}
             class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
@@ -41,28 +41,12 @@ const SelectGift = ({ setPage, setSelectedItems, setTotalCost }) => {
         </button>
         <button
           onClick={() => setPage((prev) => prev + 1)}
-          class="px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 focus:outline-none focus:shadow-outline-gray active:bg-gray-500"
+          class="bg-gray-400 hover:bg-gray-600 text-gray-800 font-bold py-2 px-4 rounded-full"
         >
           Next Page
         </button>
       </div>
     </div>
-
-    // <div>
-    //   <h1>Gift Items</h1>
-    //   {giftItems.map((item) => (
-    //     <div key={item.id}>
-    //       <img src={item.image} alt="itemimage" />
-    //       <span>{item.name}</span>
-    //       <span>{item.price}</span>
-    //       <button onClick={() => handleSelectItem(item)}>
-    //         Select Your Gift
-    //       </button>
-    //     </div>
-    //   ))}
-    //   <button onClick={() => setPage((prev) => prev - 1)}>Prev</button>
-    //   <button onClick={() => setPage((prev) => prev + 1)}>Next</button>
-    // </div>
   );
 };
 
